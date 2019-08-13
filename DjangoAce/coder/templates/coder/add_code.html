@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+<title>{% block title %}DjangoAce{% endblock %}</title>
+
+{% block content %}
+
+<form id="coder_form" class="form" method="post">
+	{% csrf_token %}
+	
+	<div>
+		Program title: <input type="text" name="title" required id="id_program"> <br> <br>
+	</div>
+
+	<div id="mydiv">
+		<textarea data-editor="twilight" name="program" cols="200" rows="20" required id="id_program">
+	</textarea>
+	</div>
+
+	<div>
+	<input type="Submit" name="Submit" value="Submit"/>
+	</div>
+</form>
+
+{% endblock %}	
+
