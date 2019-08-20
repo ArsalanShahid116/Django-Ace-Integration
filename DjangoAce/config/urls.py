@@ -7,5 +7,5 @@ import coder.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('coder/', include('coder.urls')),
+    path('coder/', include(('coder.urls', 'coder'), namespace='coder')),
 ]

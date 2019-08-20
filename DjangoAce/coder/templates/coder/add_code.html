@@ -8,11 +8,16 @@
 	{% csrf_token %}
 	
 	<div>
-		Program title: <input type="text" name="title" required id="id_program"> <br> <br>
+		Program title: <input type="text" name="title" required id="id_slug"> <br> <br>
+	</div>
+
+	<div>
+		Program Description: <textarea name="description" cols="200" rows="2" required id="id_description">
+	</textarea>
 	</div>
 
 	<div id="mydiv">
-		<textarea data-editor="twilight" name="program" cols="200" rows="20" required id="id_program">
+		<textarea data-editor="twilight" name="body" cols="200" rows="20" required id="id_body">
 	</textarea>
 	</div>
 

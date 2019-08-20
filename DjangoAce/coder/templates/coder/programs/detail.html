@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ code.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ code.title }}</h1> <br>
+
+<p> Created by {{ code.author }} on {{ code.created }} </p> <br>
+
+<h4> Dscription </h4> <br>
+<p> {{ code.description }} </p> <br>
+
+<h4> Program </h4> <br>
+<p>
+{{ code.body|linebreaks }}
+</p>
+
+<a href="{% url "coder:code_update" code.id %}">
+Update Code
+</a>
+
+<br>
+
+<a href="{% url "coder:code_delete" code.id %}">
+Delete Code
+</a>
+
+{% endblock %}
